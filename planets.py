@@ -1,7 +1,5 @@
 from dataclasses import dataclass
-import datetime
 import gif_pygame
-
 import pygame.surface
 
 
@@ -36,11 +34,11 @@ class Earth(Planet):
     name = 'Земля'
     radius = 6371.004
     diameter = radius * 2
-    day_duration = datetime.time(23, 56, 4, 99)
+    day_duration = '23 дня, 56 минут, 4 секунды, 99 миллисекунд'
     mass = 5.9726 * 10 ** 24
     year_duration = '365 дней, 6 часов, 9 минут, 10 секунд'
     type = 'Земная группа'
-    ancient_god = None
+    ancient_god = "Нет"
     satellites = ['Луна']
     description = ('''Земля́ — третья по удалённости от Солнца планета 
 Солнечной системы. Самая плотная, пятая по диаметру и массе 
@@ -53,7 +51,7 @@ class Earth(Planet):
 голубая планета, Терра (от лат. Terra).''')
     wiki = 'https://ru.wikipedia.org/wiki/Земля'
     image = shere(250)
-    gif = gif_pygame.load('earth.gif')
+    gif = gif_pygame.load('_internal/gifs/earth.gif')
     backcolor = (254, 255, 252)
 
 
@@ -66,7 +64,7 @@ class Mercury(Planet):
     year_duration = '87 дней, 23 часов, 15 минут, 21 секунда'
     type = 'Земная группа'
     ancient_god = 'Древнеримскй бог торговли'
-    satellites = []
+    satellites = ['Нет']
     description = ('''Мерку́рий — наименьшая планета Солнечной системы и 
 самая близкая к Солнцу. Названа в честь древнеримского бога 
 торговли — быстрого Меркурия, поскольку она движется по 
@@ -80,7 +78,7 @@ class Mercury(Planet):
 а иногда он проходит по диску Солнца.''')
     wiki = 'https://ru.wikipedia.org/wiki/Меркурий'
     image = shere(200)
-    gif = gif_pygame.load('mercury.gif')
+    gif = gif_pygame.load('_internal/gifs/mercury.gif')
     backcolor = (255, 255, 255)
 
 
@@ -93,7 +91,7 @@ class Venus(Planet):
     mass = 4.8675 * 10 ** 24
     type = 'Земная группа'
     ancient_god = 'Древнеримская богиня любви'
-    satellites = []
+    satellites = ['Нет']
     description = ('''Вене́ра — вторая по удалённости от Солнца и шестая
 по размеру планета Солнечной системы, наряду с Меркурием, 
 Землёй и Марсом принадлежащая к семейству планет земной 
@@ -103,7 +101,7 @@ class Venus(Planet):
 Венера считается «сестрой» Земли''')
     wiki = 'https://ru.wikipedia.org/wiki/Венера'
     image = shere(245)
-    gif = gif_pygame.load('venus.gif')
+    gif = gif_pygame.load('_internal/gifs/venus.gif')
     backcolor = (255, 255, 255)
 
 
@@ -128,7 +126,7 @@ class Mars(Planet):
 земных.''')
     wiki = 'https://ru.wikipedia.org/wiki/Марс'
     image = shere(235)
-    gif = gif_pygame.load('mars.gif')
+    gif = gif_pygame.load('_internal/gifs/mars.gif')
     backcolor = (255, 255, 255)
 
 
@@ -153,7 +151,7 @@ class Jupiter(Planet):
 красное пятно — гигантский шторм, известный с XVII века.''')
     wiki = 'https://ru.wikipedia.org/wiki/Юпитер'
     image = shere(450)
-    gif = gif_pygame.load('jupiter.gif')
+    gif = gif_pygame.load('_internal/gifs/jupiter.gif')
     backcolor = (255, 255, 255)
 
 
@@ -182,7 +180,7 @@ class Saturn(Planet):
 пролётов «Вояджера» около Сатурна в 1980-х годах.''')
     wiki = 'https://ru.wikipedia.org/wiki/Сатурн'
     image = shere(375)
-    gif = gif_pygame.load('saturn.gif')
+    gif = gif_pygame.load('_internal/gifs/saturn.gif')
     backcolor = (255, 255, 255)
 
 
@@ -205,7 +203,7 @@ class Neptun(Planet):
 высокую долю воды, аммиака и метана.''')
     wiki = 'https://ru.wikipedia.org/wiki/Нептун'
     image = shere(300)
-    gif = gif_pygame.load('neptun.gif')
+    gif = gif_pygame.load('_internal/gifs/neptun.gif')
     backcolor = (255, 255, 255)
 
 
@@ -233,5 +231,5 @@ class Uran(Planet):
 то южным, то экватором, то средними широтами.''')
     wiki = 'https://ru.wikipedia.org/wiki/Уран_(планета)'
     image = shere(310)
-    gif = gif_pygame.load('uran.gif')
+    gif = gif_pygame.load('_internal/gifs/uran.gif')
     backcolor = (255, 255, 255)

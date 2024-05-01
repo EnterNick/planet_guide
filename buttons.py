@@ -5,8 +5,8 @@ from constants import *
 
 
 class Group_of_buttons(pygame.sprite.Sprite):
-    def __init__(self, screen: pygame.window, x: int, y: int, width: int, height: int, names: list[str], number_of_buttons: int,
-                 font: str, horizontal: bool = True):
+    def __init__(self, screen: pygame.window, x: int, y: int, width: int, height: int, names: list[str],
+                 number_of_buttons: int, font: str, horizontal: bool = True):
         super().__init__()
         self.width: int = width
         self.height: int = height

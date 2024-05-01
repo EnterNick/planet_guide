@@ -12,6 +12,8 @@ def main():
     screen = pygame.display.set_mode(SIZE)
     all_sprites = pygame.sprite.Group()
     running = True
+    pygame.display.set_caption('Справочник по планетам солнечной системы')
+    pygame.display.set_icon(pygame.image.load('_internal/icon.png'))
 
     planet_buttons = Group_of_buttons(screen, 0, 25, 150, 390, PLANETS, len(PLANETS), 'Times New Roman')
     mode_buttons = Group_of_buttons(screen, 200, 15, 300, 50, ['Описание', 'Физ. характеристики'], 2, FONT,
@@ -26,8 +28,8 @@ def main():
         for event in events:
             if event.type == pygame.QUIT:
                 running = False
-        if (pygame.mouse.get_pressed() and
-                pygame.rect.Rect(700, 406, 20, 200).collidepoint(pygame.mouse.get_pos())):
+        if (pygame.mouse.get_pressed()[0] and
+                pygame.rect.Rect(700, 400, 400, 26).collidepoint(pygame.mouse.get_pos())):
             webbrowser.open(planet.wiki)
             time.sleep(1)
         pygame_widgets.update(events)
@@ -37,9 +39,9 @@ def main():
             img = planet.image
             text = pygame.font.SysFont(FONT, 14).render(f'''Имя: {planet.name} \n
 Тип: {planet.type} \n
-Радиус: {planet.radius} \n
-Диаметр: {planet.diameter}\n
-Масса: {planet.mass}\n
+Радиус: {planet.radius} км \n
+Диаметр: {planet.diameter} км\n
+Масса: {planet.mass} кг\n
 Длительность года: {planet.year_duration}\n
 Длительность дня: {planet.day_duration}\n
 Божество: {planet.ancient_god}\n
